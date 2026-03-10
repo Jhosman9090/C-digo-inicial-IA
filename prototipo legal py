@@ -1,0 +1,67 @@
+# ley_penal_interactivo.py
+# Representación estructurada de la Ley Penal de México en formato tipo "Johnson"
+# con módulo interactivo que genera preguntas relacionadas.
+
+import json
+import random
+
+resumen_ley_penal = {
+    "session_scope": "temporary_only",
+    "theories": {
+        "LP": {
+            "name": "Ley Penal de México",
+            "rules": [
+                "Define qué conductas son delitos (✅ verificado)",
+                "Establece sanciones proporcionales y respetuosas de derechos humanos (✅)",
+                "Se fundamenta en la Constitución, Código Penal Federal y Códigos Estatales (✅)",
+                "Principios: legalidad, proporcionalidad, humanidad, presunción de inocencia (✅)",
+                "Ámbitos de validez: personal, territorial, temporal (✅)",
+                "Elementos del delito: sujeto activo, sujeto pasivo, conducta, tipicidad, antijuridicidad, culpabilidad (✅)"
+            ]
+        },
+        "TB": {
+            "name": "Teoría de Burbujas aplicada",
+            "rules": [
+                "Burbuja Verificada: normas constitucionales y códigos penales (✅)",
+                "Burbuja Complementaria: hipótesis sobre evolución futura del derecho penal (❓)",
+                "Conexiones: cada burbuja puede generar preguntas sobre justicia, derechos humanos y reformas legales (❓)"
+            ]
+        }
+    },
+    "interaction": {
+        "style": "human_like",
+        "features": [
+            "Incluir muletillas: 'mmm', 'ah', 'ok', etc.",
+            "Simular procesamiento natural humano",
+            "Generar preguntas nuevas tras cada respuesta"
+        ]
+    },
+    "requirements": {
+        "clarity": "Siempre marcar verificado (✅) o especulativo (❓)",
+        "logging": "Registrar conexiones entre principios legales, delitos y sanciones"
+    },
+    "restrictions": {
+        "scope": "válido solo en esta sesión",
+        "reset": "IA regresa a su comportamiento estándar al finalizar"
+    }
+}
+
+# Preguntas relacionadas para la Teoría de la Pregunta Infinita
+preguntas_relacionadas = [
+    "¿Qué delitos son considerados federales en México?",
+    "¿Cómo se aplica la proporcionalidad en casos graves?",
+    "¿Qué papel juega la presunción de inocencia en el proceso penal?",
+    "¿Qué diferencias existen entre el Código Penal Federal y los Estatales?",
+    "¿Cómo ha evolucionado la noción de humanidad en las penas mexicanas?"
+]
+
+def generar_preguntas():
+    print("\nPreguntas relacionadas (Teoría de la Pregunta Infinita):")
+    seleccionadas = random.sample(preguntas_relacionadas, 3)
+    for p in seleccionadas:
+        print(f"- {p}")
+
+if __name__ == "__main__":
+    print("=== Resumen Ley Penal de México ===\n")
+    print(json.dumps(resumen_ley_penal, indent=4, ensure_ascii=False))
+    generar_preguntas()
