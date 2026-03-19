@@ -1,6 +1,6 @@
 # Código inicial IA
 
-Autor: Jhosman Carlos Martínez Morales  
+Autor: Jhosman Carlos Martínez Morales  Σ-CPIA-Origin-2025
 Fecha de creación: Octubre 2025  
 
 ---
